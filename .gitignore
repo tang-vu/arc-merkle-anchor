@@ -1,0 +1,42 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Foundry
+out/
+cache/
+broadcast/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.ruff_cache/
+.pytest_cache/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# AI tooling — never commit
+CLAUDE.md
+notes/
+.claude/
+.claude-*
+AGENTS.md
+.aider*
+.cursor/
+.cursorrules
+.continue/
+.codeium/
+
+# Local
+*.log
+tmp/
