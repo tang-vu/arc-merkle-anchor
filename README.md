@@ -124,10 +124,12 @@ arc-merkle-anchor/
 ├── script/Deploy.s.sol              ← Foundry deploy script
 ├── test/MerkleAnchorRegistry.t.sol  ← 13 tests, covers verifier + tampering
 ├── foundry.toml                     ← solc 0.8.26, via_ir
-└── python/
-    ├── merkle.py                    ← off-chain prover (pure stdlib)
-    ├── anchor_example.py            ← end-to-end demo
-    └── requirements.txt             ← web3 + dotenv only (for the example)
+├── python/
+│   ├── merkle.py                    ← off-chain prover (pure stdlib)
+│   ├── anchor_example.py            ← end-to-end demo
+│   └── requirements.txt             ← web3 + dotenv only (for the example)
+└── frontend/                        ← Next.js 15 + wagmi v2 + viem v2 + ConnectKit starter
+    └── README.md                    ← drag a file → browser-side Merkle → wallet signs → on-chain anchor
 ```
 
 **Zero-import contract:** `src/MerkleAnchorRegistry.sol` imports nothing.
@@ -137,6 +139,13 @@ dependency, no remappings.
 **Zero-dep prover:** `python/merkle.py` uses only `hashlib` from the standard
 library. The example script needs `web3` to talk to Arc, but the prover
 itself is portable to any environment.
+
+**Frontend starter (`frontend/`):** Next.js 15 + wagmi v2 + viem v2 +
+ConnectKit. Anchor / verify / session-key flows on top of the deployed
+registry. Browser-side SHA-256 + Merkle root — nothing leaves the device
+until the user signs. Static-export-friendly; one env var (`NEXT_PUBLIC_REGISTRY_ADDRESS`)
+points it at your own deployed registry. See `frontend/README.md` for the
+5-minute quick start.
 
 ---
 
