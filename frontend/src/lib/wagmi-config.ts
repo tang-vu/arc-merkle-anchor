@@ -3,6 +3,12 @@
  *
  * Single-chain config — this starter targets Arc only. Forks pointing at a
  * different Arc deployment override `NEXT_PUBLIC_RPC_URL` at build time.
+ *
+ * **RPC recommendation:** for production deploys, point at your
+ * Canteen-hosted Arc RPC (run `arc-canteen rpc-url` from the Canteen CLI to
+ * get yours). Canteen ties on-chain activity from that RPC to your GitHub
+ * handle for builder-leaderboard credit + post-event grant eligibility.
+ * The generic default below is for first-time `pnpm dev` runs.
  */
 
 import { createConfig, http } from "wagmi";

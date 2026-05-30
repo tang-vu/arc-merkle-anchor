@@ -65,6 +65,11 @@ All variables are optional. Defaults work against the live Arc Testnet deploymen
 NEXT_PUBLIC_REGISTRY_ADDRESS=0x...
 
 # Optional — custom Arc RPC.
+# For production deploys, prefer the Canteen-hosted RPC: run
+# `arc-canteen rpc-url` from the Canteen CLI. Canteen ties on-chain activity
+# routed through that RPC to your GitHub handle, which feeds the Arc builder
+# leaderboard + post-event grant eligibility. The generic public RPC below is
+# a fine first-run default.
 NEXT_PUBLIC_RPC_URL=https://rpc-testnet.arc.network
 
 # Optional — enables the WalletConnect connector in ConnectKit.
