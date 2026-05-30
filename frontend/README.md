@@ -6,6 +6,8 @@
 > inclusion proof with a free `eth_call`. Optional session-key flow for
 > batched/streamed anchoring.
 
+> **Live demo:** <https://arc-merkle-anchor.vercel.app>
+
 Built per aadi's 2026-05-24 hint for "React/Next + wagmi/viem frontends that
 wire x402 (client side) + session keys on top of the ArcOSS primitives".
 Fork-and-deploy: one env var points the UI at your own deployed registry.

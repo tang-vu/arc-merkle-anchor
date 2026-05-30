@@ -147,6 +147,11 @@ until the user signs. Static-export-friendly; one env var (`NEXT_PUBLIC_REGISTRY
 points it at your own deployed registry. See `frontend/README.md` for the
 5-minute quick start.
 
+**Live demo:** [`arc-merkle-anchor.vercel.app`](https://arc-merkle-anchor.vercel.app)
+— deployed against the testnet contract above. Connect any wallet, drop a
+file, watch the Merkle root form, sign + anchor — end-to-end working without
+a clone.
+
 ---
 
 ## Contract reference
